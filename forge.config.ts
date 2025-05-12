@@ -8,6 +8,8 @@ import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
 import dotenv from 'dotenv';
 dotenv.config();
+console.log(process.env.GITHUB_REPO);
+console.log(process.env.GITHUB_TOKEN);
 
 const config: ForgeConfig = {
   packagerConfig: {
@@ -61,11 +63,11 @@ const config: ForgeConfig = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: process.env.GITHUB_REPO.split('/')[0], // Tên tài khoản GitHub của bạn
-          name: process.env.GITHUB_REPO.split('/')[1], // Tên repository GitHub của bạn
+          owner: process.env.GITHUB_REPO.split('/')[0].toString(), // Tên tài khoản GitHub của bạn
+          name: process.env.GITHUB_REPO.split('/')[1].toString(), // Tên repository GitHub của bạn
         },
-        authToken: process.env.GITHUB_TOKEN, // Token GitHub của bạn
-        prerelease: true, // Đặt `true` nếu bạn muốn phát hành bản thử nghiệm
+        authToken: process.env.GITHUB_TOKEN.toString(), // Token GitHub của bạn
+        prerelease: false, // Đặt `true` nếu bạn muốn phát hành bản thử nghiệm
       },
     },
   ],

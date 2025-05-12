@@ -1,6 +1,6 @@
 {
-  "name": "auto_login_chanhcity",
-  "productName": "auto_login_chanhcity",
+  "name": "Electron-React-TailwindCss",
+  "productName": "Electron-React-TailwindCss",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
@@ -13,8 +13,11 @@
   },
   "keywords": [],
   "author": {
-    "name": "Dat240906",
-    "email": "phungthanhdat001@gmail.com"
+    "name": "pillrock06"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pillrock/ElectronForgeViteTypeScript-TailwindCss-React--QuickStart.git"
   },
   "license": "MIT",
   "devDependencies": {
